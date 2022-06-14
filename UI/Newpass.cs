@@ -32,7 +32,7 @@ namespace Simple_Password_Manager
                 Settings.Default.pass = textnewpass.Text;
                 Settings.Default.Save();
                 MessageBox.Show("Password updated");
-                frmprincipal frmprincipal = new frmprincipal();
+                PassManagerMainWindow frmprincipal = new PassManagerMainWindow();
                 frmprincipal.Show();
 
             }

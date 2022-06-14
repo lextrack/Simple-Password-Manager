@@ -20,7 +20,7 @@ namespace Simple_Password_Manager
             if (txtLog.Text == enterpass)
             {
                 this.Hide();
-                frmprincipal fm = new frmprincipal();
+                PassManagerMainWindow fm = new PassManagerMainWindow();
                 fm.Show();
 
             }

@@ -3,10 +3,10 @@ using System.IO;
 
 namespace Simple_Password_Manager
 {
-    public partial class frmprincipal : Form
+    public partial class PassManagerMainWindow : Form
     {
         string tabla = "";
-        public frmprincipal()
+        public PassManagerMainWindow()
         {
             InitializeComponent();
             new BaseDeDatos("");
