@@ -26,7 +26,7 @@ namespace Simple_Password_Manager
             }
             else
             {
-                MessageBox.Show("Password incorrect");
+                MessageBox.Show("Password incorrect", "Error");
             }
         }
 

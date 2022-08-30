@@ -108,7 +108,7 @@
             this.btnelimartabla.Name = "btnelimartabla";
             this.btnelimartabla.Size = new System.Drawing.Size(146, 45);
             this.btnelimartabla.TabIndex = 6;
-            this.btnelimartabla.Text = "Remove from the manager";
+            this.btnelimartabla.Text = "Remove from the database";
             this.btnelimartabla.UseVisualStyleBackColor = false;
             this.btnelimartabla.Click += new System.EventHandler(this.btnelimartabla_Click);
             // 
@@ -229,9 +229,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(188, 200);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(258, 17);
+            this.label6.Size = new System.Drawing.Size(147, 17);
             this.label6.TabIndex = 12;
-            this.label6.Text = "The columns that will have this password";
+            this.label6.Text = "Columns you\'ve added";
             // 
             // label5
             // 
@@ -250,7 +250,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(188, 137);
+            this.label4.Location = new System.Drawing.Point(188, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 17);
             this.label4.TabIndex = 5;
@@ -304,7 +304,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(188, 157);
+            this.textBox1.Location = new System.Drawing.Point(188, 155);
             this.textBox1.Name = "textBox1";
             this.textBox1.PlaceholderText = "Press enter to add each column";
             this.textBox1.Size = new System.Drawing.Size(375, 25);

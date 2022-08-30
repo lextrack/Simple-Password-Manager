@@ -59,7 +59,7 @@ namespace Simple_Password_Manager
             if (cb.SelectedIndex > 0)
             {
 
-                if ((int)MessageBox.Show("Are you sure you want to delete this password from the database?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (int)Constants.vbYes)
+                if ((int)MessageBox.Show("Are you sure you want to delete this password from the Password Manager?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (int)Constants.vbYes)
                 {
                     BaseDeDatos.EliminarTabla(cb.SelectedItem.ToString());
                     cb.SelectedIndex = 0;
@@ -127,9 +127,9 @@ namespace Simple_Password_Manager
 
         private void btncrearpass_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
+            if (string.IsNullOrEmpty(textBox2.Text))
             {
-                MessageBox.Show("Password name and Column names can't be empty", "Error");
+                MessageBox.Show("At very least, the password must have a name and a column. These fields can't be empty.", "Error");
             }
             else
             {
