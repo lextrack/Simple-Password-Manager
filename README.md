@@ -2,11 +2,7 @@
 
 **Default password: 1234**
 
-[![logwin.png](https://i.postimg.cc/sXRM6tWv/logwin.png)](https://postimg.cc/yJv6WpvH)
-[![paswin.png](https://i.postimg.cc/cLW0M1Q8/paswin.png)](https://postimg.cc/fJ8GMNqw)
-
-[![maininter.png](https://i.postimg.cc/kGTD5Gpb/maininter.png)](https://postimg.cc/kRt71J9J)
-[![newpwin.png](https://i.postimg.cc/brys8k3P/newpwin.png)](https://postimg.cc/bD5z9G7V)
+[![simple-password-manager-presentation.gif](https://i.postimg.cc/C5s7JpSc/simple-password-manager-presentation.gif)](https://postimg.cc/RJqwV83t)
 
 ## Requirements
 
