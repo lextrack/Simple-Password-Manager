@@ -10,7 +10,7 @@ namespace Simple_Password_Manager
     public class BaseDeDatos
     {
 
-        private const string DEL = "ID%$#%$dgfssdddffds#··#·$$%$#··#·$$@@··#·%$#··password#·$$gfr3gfhhgawasdsad243443dfdsfds3435rh..--.yhghgcontraseña3dd3ffdsdfdffdfdpassword%$#··#sdh2ha-ñd.lds.df.s·$$@·#·%$#··#·$$@@$@%%$#password·dfdfewsxcv-f4·#·$$@··#·$$@%$#··#·$$@8df%$#··#·$$@sdwc2dd2wvvd3fssdxf-f.dlssld-";
+        private const string DEL = "I44%$#%$dgfssdddffds#··#·$$%$#··#·$$@@··#·%$#··password#·$$gfr3gfhhgawasdsad243443dfdsfds3435rh..--56jdsfjfnds.yhghgcontraseña3dd3ffdsdfdffdfdpassword%$#··#sdh2ha-ñd.lds.df.s·$$@·#·%$#··#·$$@@$@%%$#password·dfdfewsxcv-f4·#·$$@··#·$$@%$#··ffd54fgd45hgf45jh/hgf*/dfg98dfg56465#·$$@8df%$#··#·$$@sdwc2dd2wvvd3fssdxf-f.dlssld-";
         private string _ruta = Application.StartupPath + "\\db\\";
         public string Tabla { get; set; }
         public BaseDeDatos(string t) { Tabla = t; carpeta(); if (!Existe("Social Networks")) CrearTabla("Social Networks", new string[] { "ID", "Social network name", "User name", "E-mail", "Password" }); }

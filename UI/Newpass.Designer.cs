@@ -42,7 +42,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(50, 160);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(50, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 17);
             this.label2.TabIndex = 11;
@@ -53,6 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(26, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(308, 25);
@@ -61,39 +63,43 @@
             // 
             // textnewpass
             // 
-            this.textnewpass.Location = new System.Drawing.Point(50, 180);
+            this.textnewpass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textnewpass.Location = new System.Drawing.Point(50, 178);
             this.textnewpass.Name = "textnewpass";
             this.textnewpass.PasswordChar = '*';
-            this.textnewpass.Size = new System.Drawing.Size(254, 23);
+            this.textnewpass.Size = new System.Drawing.Size(254, 25);
             this.textnewpass.TabIndex = 2;
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCancel.Location = new System.Drawing.Point(180, 226);
+            this.btnCancel.Location = new System.Drawing.Point(180, 216);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(124, 31);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSavenewpass
             // 
+            this.btnSavenewpass.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSavenewpass.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSavenewpass.Location = new System.Drawing.Point(50, 226);
+            this.btnSavenewpass.Location = new System.Drawing.Point(50, 216);
             this.btnSavenewpass.Name = "btnSavenewpass";
             this.btnSavenewpass.Size = new System.Drawing.Size(124, 31);
             this.btnSavenewpass.TabIndex = 3;
             this.btnSavenewpass.Text = "Save changes";
-            this.btnSavenewpass.UseVisualStyleBackColor = true;
+            this.btnSavenewpass.UseVisualStyleBackColor = false;
             this.btnSavenewpass.Click += new System.EventHandler(this.btnSavenewpass_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(50, 92);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(50, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 17);
             this.label3.TabIndex = 13;
@@ -102,7 +108,7 @@
             // textoldpass
             // 
             this.textoldpass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textoldpass.Location = new System.Drawing.Point(50, 112);
+            this.textoldpass.Location = new System.Drawing.Point(50, 110);
             this.textoldpass.Name = "textoldpass";
             this.textoldpass.PasswordChar = '*';
             this.textoldpass.Size = new System.Drawing.Size(254, 25);
@@ -112,8 +118,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(356, 274);
+            this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textoldpass);
             this.Controls.Add(this.label2);
@@ -121,8 +128,9 @@
             this.Controls.Add(this.textnewpass);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSavenewpass);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Newpass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Newpass";

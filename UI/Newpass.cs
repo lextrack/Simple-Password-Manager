@@ -31,14 +31,14 @@ namespace Simple_Password_Manager
             {
                 Settings.Default.pass = textnewpass.Text;
                 Settings.Default.Save();
-                MessageBox.Show("Password updated");
+                MessageBox.Show("Password updated", "Update");
                 PassManagerMainWindow frmprincipal = new PassManagerMainWindow();
                 frmprincipal.Show();
 
             }
             else
             {
-                MessageBox.Show("The current password is incorrect");
+                MessageBox.Show("The current password is incorrect", "Error");
             }
         }
 

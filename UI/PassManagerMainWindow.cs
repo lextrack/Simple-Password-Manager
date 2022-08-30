@@ -11,11 +11,11 @@ namespace Simple_Password_Manager
             InitializeComponent();
             new BaseDeDatos("");
 
-            actualizar(0);
+            Actualizar(0);
             btnguardar.Enabled = false;
         }
 
-        void actualizar(int index)
+        void Actualizar(int index)
         {
             cb.Items.Clear();
             cb.Items.Add("Select a password or create a new one");
@@ -65,7 +65,7 @@ namespace Simple_Password_Manager
                     cb.SelectedIndex = 0;
                     tabla = "";
                     btnguardar.Enabled = false;
-                    actualizar(0);
+                    Actualizar(0);
 
                 }
             }
@@ -120,26 +120,23 @@ namespace Simple_Password_Manager
         private void listBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (listBox1.SelectedIndex > -1 && e.KeyCode == Keys.Delete)
-                if (MessageBox.Show("Are you sure you want to remove this column \"" + listBox1.SelectedItem.ToString() + "\"?", "Delete", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to remove the column \"" + listBox1.SelectedItem.ToString() + "\"?", "Delete", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                { listBox1.Items.RemoveAt(listBox1.SelectedIndex); textBox1.Focus(); }
 
         }
 
         private void btncrearpass_Click(object sender, EventArgs e)
         {
-            BaseDeDatos.CrearTabla(textBox2.Text, listBox1.Items.OfType<string>().ToArray());
-            actualizar(0);
-            MessageBox.Show("Password successfully created");
-        }
-
-        private void textBox1_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.Show("Add column names and press Enter to add them", textBox1);
-        }
-
-        private void btncrearpass_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.Show("Add this password to the database!", btncrearpass);
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Password name and Column names can't be empty", "Error");
+            }
+            else
+            {
+                BaseDeDatos.CrearTabla(textBox2.Text, listBox1.Items.OfType<string>().ToArray());
+                Actualizar(0);
+                MessageBox.Show("Password successfully created", "Create");
+            }
         }
 
         private void txtbuscartabla_TextChanged_1(object sender, EventArgs e)
