@@ -1,6 +1,6 @@
 # Simple-Password-Manager
 <br> 
-<h2 align="center"><em><b>The default password is: 1234. Of course, you can change it.</b></em></h2>
+<h2 align="center"><em><b>The default password is: 1234. Of course, you can change that generic password.</b></em></h2>
 
 <p align="center">
   <a href="https://postimg.cc/"><img src="https://i.postimg.cc/bJXRhwv6/ico-pass-1.png"></a>
@@ -9,7 +9,7 @@
 
 <h2 align="center">Install</h2>
 <p align="center">
-  Windows 7, 8.1, 10, 11 (64 bits) | v1.0.1 (146 MB) | <a href="https://github.com/lextrack/Simple-Password-Manager/releases/download/1.0.1/Simple-Password-Manager.1.0.1.zip">Download</a><br><br>
+  Windows 7, 8.1, 10, 11 (64 bits) | v1.0.1 | <a href="https://github.com/lextrack/Simple-Password-Manager/releases/download/1.0.1/Simple-Password-Manager.1.0.1.zip">Download</a><br><br>
   Uses <a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">.Net 6.0</a><br>
   <a href="https://postimg.cc/"><img src="https://i.postimg.cc/C5s7JpSc/simple-password-manager-presentation.gif"></a>
 </p>
