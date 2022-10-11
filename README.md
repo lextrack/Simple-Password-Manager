@@ -14,7 +14,7 @@
   <a href="https://postimg.cc/"><img src="https://i.postimg.cc/C5s7JpSc/simple-password-manager-presentation.gif"></a>
 </p>
 
-<h2 align="center">Features</h2>
+<h2 align="center">Acknowledgment</h2>
 <p align="center">
 Thanks to <b>Flaticon</b> for the icon and <b>Gerry Studios</b> for give me the idea to create this.
 </p>
