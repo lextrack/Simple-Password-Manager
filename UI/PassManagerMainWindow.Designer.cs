@@ -130,7 +130,7 @@
             this.cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cb.FormattingEnabled = true;
-            this.cb.Location = new System.Drawing.Point(136, 15);
+            this.cb.Location = new System.Drawing.Point(158, 15);
             this.cb.Name = "cb";
             this.cb.Size = new System.Drawing.Size(332, 25);
             this.cb.TabIndex = 4;
@@ -140,7 +140,7 @@
             // 
             this.txtbuscartabla.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtbuscartabla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtbuscartabla.Location = new System.Drawing.Point(136, 61);
+            this.txtbuscartabla.Location = new System.Drawing.Point(158, 61);
             this.txtbuscartabla.Name = "txtbuscartabla";
             this.txtbuscartabla.Size = new System.Drawing.Size(332, 25);
             this.txtbuscartabla.TabIndex = 3;
