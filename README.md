@@ -11,7 +11,7 @@ Simple Password Manager is a program that allows you to store and manage your pa
 
 <h2 align="center">How to use?</h2>
 
-<h3 align="left">To start using Simple Password Manager, launch the program by double-clicking on the icon and enter the default password which is: 1234. As is evident, you can change that password in the login menu for a better security.</h3>
+<h3 align="left">To start using Simple Password Manager, launch the program by double-clicking on the icon and enter the default password which is: 1234. As is evident, you can change that password in the login window for a better security.</h3>
 
 - The main window will appear, displaying a list of all the passwords you have saved in the program. By default, you have a password called "Social Networks" and you can add data there. 
 
