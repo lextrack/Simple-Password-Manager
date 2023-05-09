@@ -1,4 +1,5 @@
 using Microsoft.VisualBasic;
+using Simple_Password_Manager.UI;
 using System.IO;
 
 namespace Simple_Password_Manager
@@ -19,7 +20,7 @@ namespace Simple_Password_Manager
         {
             cb.Items.Clear();
             cb.Items.Add("Select a password or create a new one");
-            cb.Items.AddRange(Directory.GetFiles(Application.StartupPath + "\\db\\", "*.zip").ToList().Select(Path.GetFileNameWithoutExtension).ToArray());
+            cb.Items.AddRange(Directory.GetFiles(Application.StartupPath + "\\db\\", "*.png").ToList().Select(Path.GetFileNameWithoutExtension).ToArray());
             cb.SelectedIndex = index;
         }
 
@@ -42,6 +43,8 @@ namespace Simple_Password_Manager
             BaseDeDatos db = new BaseDeDatos(tabla);
             db.Guardar(db.DGVaLista(dgvver));
             db.VerEnDGV(dgvver, db.Abrir());
+
+            MessageBox.Show("The data was saved successfully.", "Save");
         }
 
 
@@ -59,21 +62,20 @@ namespace Simple_Password_Manager
             if (cb.SelectedIndex > 0)
             {
 
-                if ((int)MessageBox.Show("Are you sure you want to delete this password from the Password Manager?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (int)Constants.vbYes)
+                if ((int)MessageBox.Show("Are you sure you want to delete this password from the Password Manager? This action will delete the entire password including its columns.", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (int)Constants.vbYes)
                 {
                     BaseDeDatos.EliminarTabla(cb.SelectedItem.ToString());
                     cb.SelectedIndex = 0;
                     tabla = "";
                     btnguardar.Enabled = false;
                     Actualizar(0);
-
                 }
             }
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
-            if ((int)MessageBox.Show("Are you sure you want to exit? If you don't have saved the changes, you will lose all your data", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (int)Constants.vbYes)
+            if ((int)MessageBox.Show("Are you sure you want to exit? If you haven't saved your changes, you will lose all unsaved data.", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (int)Constants.vbYes)
             {
                 Application.Exit();
             }
@@ -121,7 +123,7 @@ namespace Simple_Password_Manager
         {
             if (listBox1.SelectedIndex > -1 && e.KeyCode == Keys.Delete)
                 if (MessageBox.Show("Are you sure you want to remove the column \"" + listBox1.SelectedItem.ToString() + "\"?", "Delete", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
-               { listBox1.Items.RemoveAt(listBox1.SelectedIndex); textBox1.Focus(); }
+                { listBox1.Items.RemoveAt(listBox1.SelectedIndex); textBox1.Focus(); }
 
         }
 
@@ -129,13 +131,15 @@ namespace Simple_Password_Manager
         {
             if (string.IsNullOrEmpty(textBox2.Text))
             {
-                MessageBox.Show("At very least, the password must have a name and a column. These fields can't be empty.", "Error");
+                MessageBox.Show("At a minimum, a password should have a name and a set of associated data, such as an ID, a nickname, an email address, and the password itself. For example, for a YouTube password, you could use 'YouTube' as the name and organize the information into columns that include: 'ID' (using the number 1 for the first entry, then 2, 3, and so on), 'Nickname', 'Email', and 'Password'.", "Error");
             }
             else
             {
                 BaseDeDatos.CrearTabla(textBox2.Text, listBox1.Items.OfType<string>().ToArray());
-                Actualizar(0);
-                MessageBox.Show("Password successfully created", "Create");
+                Actualizar(1);
+                MessageBox.Show("Password successfully created.", "Create");
+                textBox2.Clear();
+                listBox1.Items.Clear();
             }
         }
 
@@ -146,6 +150,12 @@ namespace Simple_Password_Manager
                 BaseDeDatos db = new BaseDeDatos(tabla);
                 db.VerEnDGV(dgvver, db.Buscar(x => x.Contains(txtbuscartabla.Text), 0, true));
             }
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            Aboutform Aboutformnew = new Aboutform();
+            Aboutformnew.ShowDialog();
         }
     }
 }

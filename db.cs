@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace Simple_Password_Manager
 {
@@ -13,21 +8,21 @@ namespace Simple_Password_Manager
         private const string DEL = "I44%$#%$dgfssdddffds#··#·$$%$#··#·$$@@··#·%$#··password#·$$gfr3gfhhgawasdsad243443dfdsfds3435rh..--56jdsfjfnds.yhghgcontraseña3dd3ffdsdfdffdfdpassword%$#··#sdh2ha-ñd.lds.df.s·$$@·#·%$#··#·$$@@$@%%$#password·dfdfewsxcv-f4·#·$$@··#·$$@%$#··ffd54fgd45hgf45jh/hgf*/dfg98dfg56465#·$$@8df%$#··#·$$@sdwc2dd2wvvd3fssdxf-f.dlssld-";
         private string _ruta = Application.StartupPath + "\\db\\";
         public string Tabla { get; set; }
-        public BaseDeDatos(string t) { Tabla = t; carpeta(); if (!Existe("Social Networks")) CrearTabla("Social Networks", new string[] { "ID", "Social network name", "User name", "E-mail", "Password" }); }
+        public BaseDeDatos(string t) { Tabla = t; carpeta(); if (!Existe("Social Networks")) CrearTabla("Social Networks", new string[] { "ID", "Social network name", "Nickname", "Email", "Password" }); }
         /*************************************/
         public static void CrearTabla(string n, string[] col)
         {
-            string ruta = Application.StartupPath + "\\db\\" + n + ".zip";
+            string ruta = Application.StartupPath + "\\db\\" + n + ".png";
             File.WriteAllText(ruta, string.Join(DEL, col));
         }
 
         public static void EliminarTabla(string n)
         {
-            string ruta = Application.StartupPath + "\\db\\" + n + ".zip";
+            string ruta = Application.StartupPath + "\\db\\" + n + ".png";
             if (File.Exists(ruta)) File.Delete(ruta);
         }
 
-        public static bool Existe(string nombre) { return File.Exists(Application.StartupPath + "\\db\\" + nombre + ".zip"); }
+        public static bool Existe(string nombre) { return File.Exists(Application.StartupPath + "\\db\\" + nombre + ".png"); }
         /********************************************/
         private string actualizar = "\r\n";
         public void Actualizar(Func<string, bool> b, int index, List<string> valores)
@@ -108,7 +103,7 @@ namespace Simple_Password_Manager
         }
 
         /********************************************/
-        private string Ruta() { return _ruta + Tabla + ".zip"; }
+        private string Ruta() { return _ruta + Tabla + ".png"; }
         private void excepcion() { if (Tabla == "" || !File.Exists(Ruta())) throw new Exception("Password not found"); }
         private void carpeta() { if (!Directory.Exists(_ruta)) Directory.CreateDirectory(_ruta); }
         private string[] SplitDEL(string txt) { return txt.Split(new string[] { DEL }, StringSplitOptions.None); }

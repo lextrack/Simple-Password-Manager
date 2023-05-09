@@ -28,311 +28,329 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PassManagerMainWindow));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnsalir = new System.Windows.Forms.Button();
-            this.btnelimartabla = new System.Windows.Forms.Button();
-            this.btnguardar = new System.Windows.Forms.Button();
-            this.cb = new System.Windows.Forms.ComboBox();
-            this.txtbuscartabla = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvver = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btncrearpass = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvver)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.SuspendLayout();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            btnAbout = new Button();
+            btnsalir = new Button();
+            btnelimartabla = new Button();
+            btnguardar = new Button();
+            cb = new ComboBox();
+            txtbuscartabla = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            dgvver = new DataGridView();
+            tabPage2 = new TabPage();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            btncrearpass = new Button();
+            listBox1 = new ListBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvver).BeginInit();
+            tabPage2.SuspendLayout();
+            SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(2, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(752, 484);
-            this.tabControl1.TabIndex = 0;
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabControl1.Location = new Point(2, 3);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(752, 484);
+            tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.tabPage1.Controls.Add(this.btnsalir);
-            this.tabPage1.Controls.Add(this.btnelimartabla);
-            this.tabPage1.Controls.Add(this.btnguardar);
-            this.tabPage1.Controls.Add(this.cb);
-            this.tabPage1.Controls.Add(this.txtbuscartabla);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.dgvver);
-            this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(744, 454);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Password Manager";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            tabPage1.BackColor = Color.FromArgb(64, 64, 64);
+            tabPage1.Controls.Add(btnAbout);
+            tabPage1.Controls.Add(btnsalir);
+            tabPage1.Controls.Add(btnelimartabla);
+            tabPage1.Controls.Add(btnguardar);
+            tabPage1.Controls.Add(cb);
+            tabPage1.Controls.Add(txtbuscartabla);
+            tabPage1.Controls.Add(label2);
+            tabPage1.Controls.Add(label1);
+            tabPage1.Controls.Add(dgvver);
+            tabPage1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage1.Location = new Point(4, 26);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(744, 454);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Password Manager";
+            tabPage1.Click += tabPage1_Click;
+            // 
+            // btnAbout
+            // 
+            btnAbout.BackColor = SystemColors.ButtonHighlight;
+            btnAbout.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAbout.Location = new Point(540, 403);
+            btnAbout.Name = "btnAbout";
+            btnAbout.Size = new Size(146, 40);
+            btnAbout.TabIndex = 9;
+            btnAbout.Text = "About";
+            btnAbout.UseVisualStyleBackColor = false;
+            btnAbout.Click += btnAbout_Click;
             // 
             // btnsalir
             // 
-            this.btnsalir.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnsalir.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnsalir.Location = new System.Drawing.Point(486, 384);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(146, 44);
-            this.btnsalir.TabIndex = 7;
-            this.btnsalir.Text = "Exit";
-            this.btnsalir.UseVisualStyleBackColor = false;
-            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            btnsalir.BackColor = SystemColors.ButtonHighlight;
+            btnsalir.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnsalir.Location = new Point(380, 403);
+            btnsalir.Name = "btnsalir";
+            btnsalir.Size = new Size(146, 40);
+            btnsalir.TabIndex = 6;
+            btnsalir.Text = "Exit";
+            btnsalir.UseVisualStyleBackColor = false;
+            btnsalir.Click += btnsalir_Click;
             // 
             // btnelimartabla
             // 
-            this.btnelimartabla.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnelimartabla.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnelimartabla.Location = new System.Drawing.Point(287, 383);
-            this.btnelimartabla.Name = "btnelimartabla";
-            this.btnelimartabla.Size = new System.Drawing.Size(146, 45);
-            this.btnelimartabla.TabIndex = 6;
-            this.btnelimartabla.Text = "Remove from the database";
-            this.btnelimartabla.UseVisualStyleBackColor = false;
-            this.btnelimartabla.Click += new System.EventHandler(this.btnelimartabla_Click);
+            btnelimartabla.BackColor = SystemColors.ButtonHighlight;
+            btnelimartabla.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnelimartabla.Location = new Point(219, 403);
+            btnelimartabla.Name = "btnelimartabla";
+            btnelimartabla.Size = new Size(146, 40);
+            btnelimartabla.TabIndex = 5;
+            btnelimartabla.Text = "Remove password";
+            btnelimartabla.UseVisualStyleBackColor = false;
+            btnelimartabla.Click += btnelimartabla_Click;
             // 
             // btnguardar
             // 
-            this.btnguardar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnguardar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnguardar.Location = new System.Drawing.Point(82, 383);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(146, 45);
-            this.btnguardar.TabIndex = 5;
-            this.btnguardar.Text = "Save changes";
-            this.btnguardar.UseVisualStyleBackColor = false;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            btnguardar.BackColor = SystemColors.ButtonHighlight;
+            btnguardar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnguardar.Location = new Point(59, 403);
+            btnguardar.Name = "btnguardar";
+            btnguardar.Size = new Size(146, 40);
+            btnguardar.TabIndex = 3;
+            btnguardar.Text = "Save changes";
+            btnguardar.UseVisualStyleBackColor = false;
+            btnguardar.Click += btnguardar_Click;
             // 
             // cb
             // 
-            this.cb.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cb.FormattingEnabled = true;
-            this.cb.Location = new System.Drawing.Point(158, 15);
-            this.cb.Name = "cb";
-            this.cb.Size = new System.Drawing.Size(332, 25);
-            this.cb.TabIndex = 4;
-            this.cb.SelectedIndexChanged += new System.EventHandler(this.cb_SelectedIndexChanged_1);
+            cb.BackColor = SystemColors.ButtonHighlight;
+            cb.Cursor = Cursors.Hand;
+            cb.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            cb.FormattingEnabled = true;
+            cb.Location = new Point(269, 12);
+            cb.Name = "cb";
+            cb.Size = new Size(431, 23);
+            cb.TabIndex = 1;
+            cb.SelectedIndexChanged += cb_SelectedIndexChanged_1;
             // 
             // txtbuscartabla
             // 
-            this.txtbuscartabla.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtbuscartabla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtbuscartabla.Location = new System.Drawing.Point(158, 61);
-            this.txtbuscartabla.Name = "txtbuscartabla";
-            this.txtbuscartabla.Size = new System.Drawing.Size(332, 25);
-            this.txtbuscartabla.TabIndex = 3;
-            this.txtbuscartabla.TextChanged += new System.EventHandler(this.txtbuscartabla_TextChanged_1);
+            txtbuscartabla.BackColor = SystemColors.ButtonHighlight;
+            txtbuscartabla.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtbuscartabla.Location = new Point(269, 58);
+            txtbuscartabla.Name = "txtbuscartabla";
+            txtbuscartabla.Size = new Size(431, 23);
+            txtbuscartabla.TabIndex = 4;
+            txtbuscartabla.TextChanged += txtbuscartabla_TextChanged_1;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(7, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Search an ID";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(26, 61);
+            label2.Name = "label2";
+            label2.Size = new Size(197, 20);
+            label2.TabIndex = 8;
+            label2.Text = "Search a password for its ID";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(7, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Select passwords";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(26, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(226, 20);
+            label1.TabIndex = 7;
+            label1.Text = "Select a password you'd created";
             // 
             // dgvver
             // 
-            this.dgvver.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvver.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvver.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvver.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvver.Location = new System.Drawing.Point(3, 93);
-            this.dgvver.Name = "dgvver";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvver.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvver.RowTemplate.Height = 25;
-            this.dgvver.Size = new System.Drawing.Size(738, 260);
-            this.dgvver.TabIndex = 0;
+            dgvver.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvver.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvver.BackgroundColor = SystemColors.WindowFrame;
+            dgvver.BorderStyle = BorderStyle.None;
+            dgvver.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.WindowFrame;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvver.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvver.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.WindowFrame;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.Control;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvver.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvver.GridColor = Color.IndianRed;
+            dgvver.Location = new Point(3, 93);
+            dgvver.Name = "dgvver";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.WindowFrame;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.Control;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvver.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvver.RowHeadersVisible = false;
+            dgvver.RowTemplate.Height = 25;
+            dgvver.Size = new Size(738, 298);
+            dgvver.TabIndex = 2;
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.btncrearpass);
-            this.tabPage2.Controls.Add(this.listBox1);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(744, 454);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Add a new password";
+            tabPage2.BackColor = Color.FromArgb(64, 64, 64);
+            tabPage2.Controls.Add(label6);
+            tabPage2.Controls.Add(label5);
+            tabPage2.Controls.Add(label4);
+            tabPage2.Controls.Add(label3);
+            tabPage2.Controls.Add(btncrearpass);
+            tabPage2.Controls.Add(listBox1);
+            tabPage2.Controls.Add(textBox2);
+            tabPage2.Controls.Add(textBox1);
+            tabPage2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage2.Location = new Point(4, 26);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(744, 454);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Add a new password";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(188, 200);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 17);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Columns you\'ve added";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.Control;
+            label6.Location = new Point(188, 202);
+            label6.Name = "label6";
+            label6.Size = new Size(147, 17);
+            label6.TabIndex = 12;
+            label6.Text = "Columns you've added";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(273, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(201, 25);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "ADD A NEW PASSWORD";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.Control;
+            label5.Location = new Point(273, 25);
+            label5.Name = "label5";
+            label5.Size = new Size(199, 23);
+            label5.TabIndex = 11;
+            label5.Text = "ADD A NEW PASSWORD";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(188, 135);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 17);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Column names";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.Control;
+            label4.Location = new Point(188, 137);
+            label4.Name = "label4";
+            label4.Size = new Size(99, 17);
+            label4.TabIndex = 5;
+            label4.Text = "Column names";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(188, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Password name";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.Control;
+            label3.Location = new Point(188, 75);
+            label3.Name = "label3";
+            label3.Size = new Size(104, 17);
+            label3.TabIndex = 4;
+            label3.Text = "Password name";
             // 
             // btncrearpass
             // 
-            this.btncrearpass.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btncrearpass.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btncrearpass.Location = new System.Drawing.Point(188, 364);
-            this.btncrearpass.Name = "btncrearpass";
-            this.btncrearpass.Size = new System.Drawing.Size(375, 29);
-            this.btncrearpass.TabIndex = 3;
-            this.btncrearpass.Text = "Create the new password";
-            this.btncrearpass.UseVisualStyleBackColor = false;
-            this.btncrearpass.Click += new System.EventHandler(this.btncrearpass_Click);
+            btncrearpass.BackColor = SystemColors.ButtonHighlight;
+            btncrearpass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btncrearpass.Location = new Point(188, 366);
+            btncrearpass.Name = "btncrearpass";
+            btncrearpass.Size = new Size(375, 29);
+            btncrearpass.TabIndex = 3;
+            btncrearpass.Text = "Create the new password";
+            btncrearpass.UseVisualStyleBackColor = false;
+            btncrearpass.Click += btncrearpass_Click;
             // 
             // listBox1
             // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.listBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 17;
-            this.listBox1.Location = new System.Drawing.Point(188, 220);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(375, 123);
-            this.listBox1.TabIndex = 2;
-            this.listBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox1_KeyDown);
+            listBox1.BackColor = SystemColors.ButtonHighlight;
+            listBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 17;
+            listBox1.Location = new Point(188, 222);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(375, 123);
+            listBox1.TabIndex = 3;
+            listBox1.KeyDown += listBox1_KeyDown;
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(188, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(375, 25);
-            this.textBox2.TabIndex = 1;
+            textBox2.BackColor = SystemColors.ButtonHighlight;
+            textBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(188, 95);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(375, 25);
+            textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(188, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Press enter to add each column";
-            this.textBox1.Size = new System.Drawing.Size(375, 25);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            textBox1.BackColor = SystemColors.ButtonHighlight;
+            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(188, 157);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Press enter to add each column to the list";
+            textBox1.Size = new Size(375, 25);
+            textBox1.TabIndex = 2;
+            textBox1.KeyDown += textBox1_KeyDown;
             // 
             // PassManagerMainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 488);
-            this.ControlBox = false;
-            this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "PassManagerMainWindow";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Simple Password Manager";
-            this.Load += new System.EventHandler(this.frmprincipal_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvver)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(754, 488);
+            ControlBox = false;
+            Controls.Add(tabControl1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            Name = "PassManagerMainWindow";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Simple Password Manager";
+            Load += frmprincipal_Load;
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvver).EndInit();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -356,5 +374,6 @@
         private Label label3;
         private Label label5;
         private Label label6;
+        private Button btnAbout;
     }
 }
