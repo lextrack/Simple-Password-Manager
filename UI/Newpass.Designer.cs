@@ -29,115 +29,114 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Newpass));
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textnewpass = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSavenewpass = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textoldpass = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            label2 = new Label();
+            label1 = new Label();
+            textnewpass = new TextBox();
+            btnCancel = new Button();
+            btnSavenewpass = new Button();
+            label3 = new Label();
+            textoldpass = new TextBox();
+            SuspendLayout();
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(50, 158);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 17);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "New password";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(50, 158);
+            label2.Name = "label2";
+            label2.Size = new Size(97, 17);
+            label2.TabIndex = 11;
+            label2.Text = "New password";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(26, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 25);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "CHANGE YOUR CURRENT PASSWORD";
+            label1.AutoSize = true;
+            label1.BorderStyle = BorderStyle.FixedSingle;
+            label1.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(34, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(293, 25);
+            label1.TabIndex = 10;
+            label1.Text = "CHANGE THE CURRENT PASSWORD";
             // 
             // textnewpass
             // 
-            this.textnewpass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textnewpass.Location = new System.Drawing.Point(50, 178);
-            this.textnewpass.Name = "textnewpass";
-            this.textnewpass.PasswordChar = '*';
-            this.textnewpass.Size = new System.Drawing.Size(254, 25);
-            this.textnewpass.TabIndex = 2;
+            textnewpass.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textnewpass.Location = new Point(50, 178);
+            textnewpass.Name = "textnewpass";
+            textnewpass.PasswordChar = '*';
+            textnewpass.Size = new Size(254, 25);
+            textnewpass.TabIndex = 2;
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCancel.Location = new System.Drawing.Point(180, 216);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(124, 31);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.BackColor = SystemColors.ButtonHighlight;
+            btnCancel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancel.Location = new Point(180, 216);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(124, 31);
+            btnCancel.TabIndex = 4;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSavenewpass
             // 
-            this.btnSavenewpass.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSavenewpass.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSavenewpass.Location = new System.Drawing.Point(50, 216);
-            this.btnSavenewpass.Name = "btnSavenewpass";
-            this.btnSavenewpass.Size = new System.Drawing.Size(124, 31);
-            this.btnSavenewpass.TabIndex = 3;
-            this.btnSavenewpass.Text = "Save changes";
-            this.btnSavenewpass.UseVisualStyleBackColor = false;
-            this.btnSavenewpass.Click += new System.EventHandler(this.btnSavenewpass_Click);
+            btnSavenewpass.BackColor = SystemColors.ButtonHighlight;
+            btnSavenewpass.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSavenewpass.Location = new Point(50, 216);
+            btnSavenewpass.Name = "btnSavenewpass";
+            btnSavenewpass.Size = new Size(124, 31);
+            btnSavenewpass.TabIndex = 3;
+            btnSavenewpass.Text = "Save changes";
+            btnSavenewpass.UseVisualStyleBackColor = false;
+            btnSavenewpass.Click += btnSavenewpass_Click;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(50, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 17);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Current password";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.Control;
+            label3.Location = new Point(50, 90);
+            label3.Name = "label3";
+            label3.Size = new Size(116, 17);
+            label3.TabIndex = 13;
+            label3.Text = "Current password";
             // 
             // textoldpass
             // 
-            this.textoldpass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textoldpass.Location = new System.Drawing.Point(50, 110);
-            this.textoldpass.Name = "textoldpass";
-            this.textoldpass.PasswordChar = '*';
-            this.textoldpass.Size = new System.Drawing.Size(254, 25);
-            this.textoldpass.TabIndex = 1;
+            textoldpass.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textoldpass.Location = new Point(50, 110);
+            textoldpass.Name = "textoldpass";
+            textoldpass.PasswordChar = '*';
+            textoldpass.Size = new Size(254, 25);
+            textoldpass.TabIndex = 1;
             // 
             // Newpass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(356, 274);
-            this.ControlBox = false;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textoldpass);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textnewpass);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSavenewpass);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "Newpass";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Newpass";
-            this.Load += new System.EventHandler(this.Newpass_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.WindowFrame;
+            ClientSize = new Size(356, 274);
+            ControlBox = false;
+            Controls.Add(label3);
+            Controls.Add(textoldpass);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(textnewpass);
+            Controls.Add(btnCancel);
+            Controls.Add(btnSavenewpass);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            Name = "Newpass";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Newpass";
+            Load += Newpass_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

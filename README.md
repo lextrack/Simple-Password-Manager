@@ -23,7 +23,7 @@ Simple Password Manager is a program that allows you to store and manage your pa
 
 <h2 align="center">Install</h2>
 <p align="center">
-  Windows 8.1, 10, 11 (64 bits) | v1.0.3 | <a href="https://github.com/lextrack/Simple-Password-Manager/releases/download/1.0.3/Simple-Password-Manager.1.0.3.Portable.zip">Download</a><br><br>
+  Windows 8.1, 10, 11 (64 bits) | v1.0.4 | <a href="https://github.com/lextrack/Simple-Password-Manager/releases/download/1.0.4/Simple-Password-Manager.1.0.4.Portable.zip">Download</a><br><br>
   Uses <a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">.Net 7.0</a><br>
 
   <a href="https://postimg.cc/"><img src="https://i.postimg.cc/Y2y5svZk/Desktop-2023-05-08-21-17-21-01.gif"></a>

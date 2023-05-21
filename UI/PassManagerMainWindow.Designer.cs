@@ -88,13 +88,13 @@
             tabPage1.Size = new Size(744, 454);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Password Manager";
-            tabPage1.Click += tabPage1_Click;
             // 
             // btnAbout
             // 
+            btnAbout.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnAbout.BackColor = SystemColors.ButtonHighlight;
             btnAbout.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAbout.Location = new Point(540, 403);
+            btnAbout.Location = new Point(386, 403);
             btnAbout.Name = "btnAbout";
             btnAbout.Size = new Size(146, 40);
             btnAbout.TabIndex = 9;
@@ -104,9 +104,10 @@
             // 
             // btnsalir
             // 
+            btnsalir.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnsalir.BackColor = SystemColors.ButtonHighlight;
             btnsalir.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnsalir.Location = new Point(380, 403);
+            btnsalir.Location = new Point(554, 403);
             btnsalir.Name = "btnsalir";
             btnsalir.Size = new Size(146, 40);
             btnsalir.TabIndex = 6;
@@ -116,9 +117,10 @@
             // 
             // btnelimartabla
             // 
+            btnelimartabla.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnelimartabla.BackColor = SystemColors.ButtonHighlight;
             btnelimartabla.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnelimartabla.Location = new Point(219, 403);
+            btnelimartabla.Location = new Point(222, 403);
             btnelimartabla.Name = "btnelimartabla";
             btnelimartabla.Size = new Size(146, 40);
             btnelimartabla.TabIndex = 5;
@@ -128,6 +130,7 @@
             // 
             // btnguardar
             // 
+            btnguardar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnguardar.BackColor = SystemColors.ButtonHighlight;
             btnguardar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnguardar.Location = new Point(59, 403);
@@ -140,6 +143,7 @@
             // 
             // cb
             // 
+            cb.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cb.BackColor = SystemColors.ButtonHighlight;
             cb.Cursor = Cursors.Hand;
             cb.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -153,6 +157,7 @@
             // 
             // txtbuscartabla
             // 
+            txtbuscartabla.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtbuscartabla.BackColor = SystemColors.ButtonHighlight;
             txtbuscartabla.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtbuscartabla.Location = new Point(269, 58);
@@ -163,6 +168,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Control;
@@ -174,6 +180,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Control;
@@ -185,6 +192,7 @@
             // 
             // dgvver
             // 
+            dgvver.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvver.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvver.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvver.BackgroundColor = SystemColors.WindowFrame;
@@ -249,9 +257,9 @@
             label6.ForeColor = SystemColors.Control;
             label6.Location = new Point(188, 202);
             label6.Name = "label6";
-            label6.Size = new Size(147, 17);
+            label6.Size = new Size(279, 17);
             label6.TabIndex = 12;
-            label6.Text = "Columns you've added";
+            label6.Text = "Columns you've added to the new password";
             // 
             // label5
             // 
@@ -339,7 +347,6 @@
             Controls.Add(tabControl1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximizeBox = false;
             Name = "PassManagerMainWindow";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Simple Password Manager";
