@@ -4,27 +4,33 @@ namespace Simple_Password_Manager
 {
     public class BaseDeDatos
     {
-
         private const string DEL = "I44%$#%$dgfssdddffds#··#·$$%$#··#·$$@@··#·%$#··password#·$$gfr3gfhhgawasdsad243443dfdsfds3435rh..--56jdsfjfnds.yhghgcontraseña3dd3ffdsdfdffdfdpassword%$#··#sdh2ha-ñd.lds.df.s·$$@·#·%$#··#·$$@@$@%%$#password·dfdfewsxcv-f4·#·$$@··#·$$@%$#··ffd54fgd45hgf45jh/hgf*/dfg98dfg56465#·$$@8df%$#··#·$$@sdwc2dd2wvvd3fssdxf-f.dlssld-";
         private string _ruta = Application.StartupPath + "\\db\\";
         public string Tabla { get; set; }
-        public BaseDeDatos(string t) { Tabla = t; carpeta(); if (!Existe("Social Networks")) CrearTabla("Social Networks", new string[] { "ID", "Social network name", "Nickname", "Email", "Password" }); }
-        /*************************************/
+
+        public BaseDeDatos(string t)
+        {
+            Tabla = t;
+            carpeta();
+        }
+
+
         public static void CrearTabla(string n, string[] col)
         {
-            string ruta = Application.StartupPath + "\\db\\" + n + ".png";
+            string ruta = Application.StartupPath + "\\db\\" + n + ".dll";
             File.WriteAllText(ruta, string.Join(DEL, col));
         }
 
         public static void EliminarTabla(string n)
         {
-            string ruta = Application.StartupPath + "\\db\\" + n + ".png";
+            string ruta = Application.StartupPath + "\\db\\" + n + ".dll";
             if (File.Exists(ruta)) File.Delete(ruta);
         }
 
-        public static bool Existe(string nombre) { return File.Exists(Application.StartupPath + "\\db\\" + nombre + ".png"); }
-        /********************************************/
+        public static bool Existe(string nombre) { return File.Exists(Application.StartupPath + "\\db\\" + nombre + ".dll"); }
+
         private string actualizar = "\r\n";
+
         public void Actualizar(Func<string, bool> b, int index, List<string> valores)
         {
             excepcion();
@@ -41,7 +47,6 @@ namespace Simple_Password_Manager
             actualizar = "\r\n";
         }
 
-        /*********************************************/
         public List<List<string>> Buscar(Func<string, bool> b, int index, bool col)
         {
             excepcion();
@@ -62,18 +67,29 @@ namespace Simple_Password_Manager
 
         public void VerEnDGV(DataGridView d, List<List<string>> t)
         {
-            d.Rows.Clear(); d.Columns.Clear();
-            for (int i = 0; i < t[0].Count; i++) d.Columns.Add(t[0][i], t[0][i]);
+            d.Rows.Clear();
+            d.Columns.Clear();
+
+            if (t.Count == 0) return; // Evita un índice fuera de rango si la tabla está vacía.
+
+            for (int i = 0; i < t[0].Count; i++)
+            {
+                d.Columns.Add(t[0][i], t[0][i]);
+            }
 
             for (int i = 1; i < t.Count; i++)
             {
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(d);
-                for (int x = 0; x < t[i].Count; x++) row.Cells[x].Value = t[i][x];
+                for (int x = 0; x < t[i].Count; x++)
+                {
+                    row.Cells[x].Value = t[i][x];
+                }
                 d.Rows.Add(row);
             }
         }
-        /********************************************/
+
+
         public List<List<string>> DGVaLista(DataGridView d)
         {
             List<List<string>> r = new List<List<string>>();
@@ -102,9 +118,16 @@ namespace Simple_Password_Manager
             File.WriteAllText(Ruta(), string.Join("\r\n", filas));
         }
 
-        /********************************************/
-        private string Ruta() { return _ruta + Tabla + ".png"; }
-        private void excepcion() { if (Tabla == "" || !File.Exists(Ruta())) throw new Exception("Password not found"); }
+
+        private string Ruta() { return _ruta + Tabla + ".dll"; }
+        private void excepcion()
+        {
+            if (Tabla == "" || !File.Exists(Ruta()))
+            {
+                MessageBox.Show("Password not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void carpeta() { if (!Directory.Exists(_ruta)) Directory.CreateDirectory(_ruta); }
         private string[] SplitDEL(string txt) { return txt.Split(new string[] { DEL }, StringSplitOptions.None); }
         private string[] SplitLINEAS(string txt) { return txt.Split(new string[] { "\r\n" }, StringSplitOptions.None); }

@@ -34,10 +34,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PassManagerMainWindow));
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            btnexitt = new Button();
             btnAbout = new Button();
-            btnsalir = new Button();
-            btnelimartabla = new Button();
-            btnguardar = new Button();
+            btnDeleteTable = new Button();
+            btnSave = new Button();
             cb = new ComboBox();
             txtbuscartabla = new TextBox();
             label2 = new Label();
@@ -52,94 +52,110 @@
             listBox1 = new ListBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
+            tabPage3 = new TabPage();
+            label8 = new Label();
+            listBoxPassDecrypt = new ListBox();
+            btnClearDecrypt = new Button();
+            btnPassDecrypt = new Button();
+            labelPassSelectorDecrypt = new Label();
+            btnClearAll = new Button();
+            btnDecrypt = new Button();
+            btnEncrypt = new Button();
+            textBoxPassword = new TextBox();
+            label7 = new Label();
+            listBoxPass = new ListBox();
+            btnClearPass = new Button();
+            btnAddPass = new Button();
+            labelPassSelector = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvver).BeginInit();
             tabPage2.SuspendLayout();
+            tabPage3.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
+            tabControl1.Dock = DockStyle.Fill;
             tabControl1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tabControl1.Location = new Point(2, 3);
+            tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
+            tabControl1.Padding = new Point(8, 5);
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(752, 484);
+            tabControl1.Size = new Size(650, 465);
             tabControl1.TabIndex = 0;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // tabPage1
             // 
             tabPage1.BackColor = Color.FromArgb(64, 64, 64);
+            tabPage1.Controls.Add(btnexitt);
             tabPage1.Controls.Add(btnAbout);
-            tabPage1.Controls.Add(btnsalir);
-            tabPage1.Controls.Add(btnelimartabla);
-            tabPage1.Controls.Add(btnguardar);
+            tabPage1.Controls.Add(btnDeleteTable);
+            tabPage1.Controls.Add(btnSave);
             tabPage1.Controls.Add(cb);
             tabPage1.Controls.Add(txtbuscartabla);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(dgvver);
-            tabPage1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            tabPage1.Location = new Point(4, 26);
+            tabPage1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage1.Location = new Point(4, 30);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(744, 454);
+            tabPage1.Size = new Size(642, 431);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "Password Manager";
+            tabPage1.Text = "Password manager";
+            // 
+            // btnexitt
+            // 
+            btnexitt.AutoSize = true;
+            btnexitt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnexitt.Location = new Point(477, 97);
+            btnexitt.Name = "btnexitt";
+            btnexitt.Size = new Size(145, 35);
+            btnexitt.TabIndex = 12;
+            btnexitt.Text = "Exit";
+            btnexitt.UseVisualStyleBackColor = true;
+            btnexitt.Click += btnexitt_Click;
             // 
             // btnAbout
             // 
-            btnAbout.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnAbout.BackColor = SystemColors.ButtonHighlight;
+            btnAbout.AutoSize = true;
             btnAbout.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAbout.Location = new Point(386, 403);
+            btnAbout.Location = new Point(324, 97);
             btnAbout.Name = "btnAbout";
-            btnAbout.Size = new Size(146, 40);
-            btnAbout.TabIndex = 9;
+            btnAbout.Size = new Size(145, 35);
+            btnAbout.TabIndex = 11;
             btnAbout.Text = "About";
-            btnAbout.UseVisualStyleBackColor = false;
+            btnAbout.UseVisualStyleBackColor = true;
             btnAbout.Click += btnAbout_Click;
             // 
-            // btnsalir
+            // btnDeleteTable
             // 
-            btnsalir.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnsalir.BackColor = SystemColors.ButtonHighlight;
-            btnsalir.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnsalir.Location = new Point(554, 403);
-            btnsalir.Name = "btnsalir";
-            btnsalir.Size = new Size(146, 40);
-            btnsalir.TabIndex = 6;
-            btnsalir.Text = "Exit";
-            btnsalir.UseVisualStyleBackColor = false;
-            btnsalir.Click += btnsalir_Click;
+            btnDeleteTable.AutoSize = true;
+            btnDeleteTable.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDeleteTable.Location = new Point(171, 97);
+            btnDeleteTable.Name = "btnDeleteTable";
+            btnDeleteTable.Size = new Size(145, 35);
+            btnDeleteTable.TabIndex = 10;
+            btnDeleteTable.Text = "Remove password";
+            btnDeleteTable.UseVisualStyleBackColor = true;
+            btnDeleteTable.Click += btnDeleteTable_Click;
             // 
-            // btnelimartabla
+            // btnSave
             // 
-            btnelimartabla.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnelimartabla.BackColor = SystemColors.ButtonHighlight;
-            btnelimartabla.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnelimartabla.Location = new Point(222, 403);
-            btnelimartabla.Name = "btnelimartabla";
-            btnelimartabla.Size = new Size(146, 40);
-            btnelimartabla.TabIndex = 5;
-            btnelimartabla.Text = "Remove password";
-            btnelimartabla.UseVisualStyleBackColor = false;
-            btnelimartabla.Click += btnelimartabla_Click;
-            // 
-            // btnguardar
-            // 
-            btnguardar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnguardar.BackColor = SystemColors.ButtonHighlight;
-            btnguardar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnguardar.Location = new Point(59, 403);
-            btnguardar.Name = "btnguardar";
-            btnguardar.Size = new Size(146, 40);
-            btnguardar.TabIndex = 3;
-            btnguardar.Text = "Save changes";
-            btnguardar.UseVisualStyleBackColor = false;
-            btnguardar.Click += btnguardar_Click;
+            btnSave.AutoSize = true;
+            btnSave.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.Location = new Point(17, 97);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(145, 35);
+            btnSave.TabIndex = 9;
+            btnSave.Text = "Save changes";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // cb
             // 
@@ -149,9 +165,9 @@
             cb.DropDownStyle = ComboBoxStyle.DropDownList;
             cb.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             cb.FormattingEnabled = true;
-            cb.Location = new Point(269, 12);
+            cb.Location = new Point(257, 14);
             cb.Name = "cb";
-            cb.Size = new Size(431, 23);
+            cb.Size = new Size(365, 23);
             cb.TabIndex = 1;
             cb.SelectedIndexChanged += cb_SelectedIndexChanged_1;
             // 
@@ -160,9 +176,9 @@
             txtbuscartabla.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtbuscartabla.BackColor = SystemColors.ButtonHighlight;
             txtbuscartabla.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtbuscartabla.Location = new Point(269, 58);
+            txtbuscartabla.Location = new Point(257, 51);
             txtbuscartabla.Name = "txtbuscartabla";
-            txtbuscartabla.Size = new Size(431, 23);
+            txtbuscartabla.Size = new Size(97, 23);
             txtbuscartabla.TabIndex = 4;
             txtbuscartabla.TextChanged += txtbuscartabla_TextChanged_1;
             // 
@@ -172,7 +188,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(26, 61);
+            label2.Location = new Point(17, 51);
             label2.Name = "label2";
             label2.Size = new Size(197, 20);
             label2.TabIndex = 8;
@@ -184,7 +200,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(26, 14);
+            label1.Location = new Point(17, 14);
             label1.Name = "label1";
             label1.Size = new Size(226, 20);
             label1.TabIndex = 7;
@@ -192,12 +208,10 @@
             // 
             // dgvver
             // 
-            dgvver.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvver.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvver.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvver.BackgroundColor = SystemColors.WindowFrame;
+            dgvver.BackgroundColor = Color.FromArgb(64, 64, 64);
             dgvver.BorderStyle = BorderStyle.None;
-            dgvver.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.WindowFrame;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -215,8 +229,9 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.InfoText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvver.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvver.Dock = DockStyle.Bottom;
             dgvver.GridColor = Color.IndianRed;
-            dgvver.Location = new Point(3, 93);
+            dgvver.Location = new Point(3, 151);
             dgvver.Name = "dgvver";
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.WindowFrame;
@@ -228,7 +243,7 @@
             dgvver.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvver.RowHeadersVisible = false;
             dgvver.RowTemplate.Height = 25;
-            dgvver.Size = new Size(738, 298);
+            dgvver.Size = new Size(636, 277);
             dgvver.TabIndex = 2;
             // 
             // tabPage2
@@ -242,20 +257,21 @@
             tabPage2.Controls.Add(listBox1);
             tabPage2.Controls.Add(textBox2);
             tabPage2.Controls.Add(textBox1);
-            tabPage2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            tabPage2.Location = new Point(4, 26);
+            tabPage2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage2.Location = new Point(4, 30);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(744, 454);
+            tabPage2.Size = new Size(642, 431);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Add a new password";
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = SystemColors.Control;
-            label6.Location = new Point(188, 202);
+            label6.Location = new Point(118, 194);
             label6.Name = "label6";
             label6.Size = new Size(279, 17);
             label6.TabIndex = 12;
@@ -263,10 +279,11 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.Control;
-            label5.Location = new Point(273, 25);
+            label5.Location = new Point(213, 24);
             label5.Name = "label5";
             label5.Size = new Size(199, 23);
             label5.TabIndex = 11;
@@ -274,10 +291,11 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.Control;
-            label4.Location = new Point(188, 137);
+            label4.Location = new Point(118, 129);
             label4.Name = "label4";
             label4.Size = new Size(99, 17);
             label4.TabIndex = 5;
@@ -285,10 +303,11 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(188, 75);
+            label3.Location = new Point(118, 67);
             label3.Name = "label3";
             label3.Size = new Size(104, 17);
             label3.TabIndex = 4;
@@ -296,11 +315,12 @@
             // 
             // btncrearpass
             // 
+            btncrearpass.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btncrearpass.BackColor = SystemColors.ButtonHighlight;
             btncrearpass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btncrearpass.Location = new Point(188, 366);
+            btncrearpass.Location = new Point(118, 358);
             btncrearpass.Name = "btncrearpass";
-            btncrearpass.Size = new Size(375, 29);
+            btncrearpass.Size = new Size(408, 29);
             btncrearpass.TabIndex = 3;
             btncrearpass.Text = "Create the new password";
             btncrearpass.UseVisualStyleBackColor = false;
@@ -308,41 +328,217 @@
             // 
             // listBox1
             // 
+            listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listBox1.BackColor = SystemColors.ButtonHighlight;
             listBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 17;
-            listBox1.Location = new Point(188, 222);
+            listBox1.Location = new Point(118, 214);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(375, 123);
+            listBox1.Size = new Size(408, 123);
             listBox1.TabIndex = 3;
             listBox1.KeyDown += listBox1_KeyDown;
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox2.BackColor = SystemColors.ButtonHighlight;
             textBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(188, 95);
+            textBox2.Location = new Point(118, 87);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(375, 25);
+            textBox2.Size = new Size(408, 25);
             textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox1.BackColor = SystemColors.ButtonHighlight;
             textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(188, 157);
+            textBox1.Location = new Point(118, 149);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Press enter to add each column to the list";
-            textBox1.Size = new Size(375, 25);
+            textBox1.Size = new Size(408, 25);
             textBox1.TabIndex = 2;
             textBox1.KeyDown += textBox1_KeyDown;
+            // 
+            // tabPage3
+            // 
+            tabPage3.BackColor = Color.FromArgb(64, 64, 64);
+            tabPage3.Controls.Add(label8);
+            tabPage3.Controls.Add(listBoxPassDecrypt);
+            tabPage3.Controls.Add(btnClearDecrypt);
+            tabPage3.Controls.Add(btnPassDecrypt);
+            tabPage3.Controls.Add(labelPassSelectorDecrypt);
+            tabPage3.Controls.Add(btnClearAll);
+            tabPage3.Controls.Add(btnDecrypt);
+            tabPage3.Controls.Add(btnEncrypt);
+            tabPage3.Controls.Add(textBoxPassword);
+            tabPage3.Controls.Add(label7);
+            tabPage3.Controls.Add(listBoxPass);
+            tabPage3.Controls.Add(btnClearPass);
+            tabPage3.Controls.Add(btnAddPass);
+            tabPage3.Controls.Add(labelPassSelector);
+            tabPage3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage3.Location = new Point(4, 30);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(642, 431);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Encrypt and decrypt passwords";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = SystemColors.Control;
+            label8.Location = new Point(166, 24);
+            label8.Name = "label8";
+            label8.Size = new Size(305, 23);
+            label8.TabIndex = 13;
+            label8.Text = "ENCRYPT AND DECRYPT PASSWORDS";
+            // 
+            // listBoxPassDecrypt
+            // 
+            listBoxPassDecrypt.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            listBoxPassDecrypt.FormattingEnabled = true;
+            listBoxPassDecrypt.Location = new Point(50, 208);
+            listBoxPassDecrypt.Name = "listBoxPassDecrypt";
+            listBoxPassDecrypt.Size = new Size(437, 69);
+            listBoxPassDecrypt.TabIndex = 12;
+            // 
+            // btnClearDecrypt
+            // 
+            btnClearDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearDecrypt.Location = new Point(493, 248);
+            btnClearDecrypt.Name = "btnClearDecrypt";
+            btnClearDecrypt.Size = new Size(103, 31);
+            btnClearDecrypt.TabIndex = 11;
+            btnClearDecrypt.Text = "Clear";
+            btnClearDecrypt.UseVisualStyleBackColor = true;
+            btnClearDecrypt.Click += btnClearDecrypt_Click;
+            // 
+            // btnPassDecrypt
+            // 
+            btnPassDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPassDecrypt.Location = new Point(493, 208);
+            btnPassDecrypt.Name = "btnPassDecrypt";
+            btnPassDecrypt.Size = new Size(103, 31);
+            btnPassDecrypt.TabIndex = 10;
+            btnPassDecrypt.Text = "Add";
+            btnPassDecrypt.UseVisualStyleBackColor = true;
+            btnPassDecrypt.Click += btnPassDecrypt_Click;
+            // 
+            // labelPassSelectorDecrypt
+            // 
+            labelPassSelectorDecrypt.AutoSize = true;
+            labelPassSelectorDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelPassSelectorDecrypt.ForeColor = SystemColors.Control;
+            labelPassSelectorDecrypt.Location = new Point(50, 188);
+            labelPassSelectorDecrypt.Name = "labelPassSelectorDecrypt";
+            labelPassSelectorDecrypt.Size = new Size(179, 17);
+            labelPassSelectorDecrypt.TabIndex = 9;
+            labelPassSelectorDecrypt.Text = "Select passwords to decrypt";
+            // 
+            // btnClearAll
+            // 
+            btnClearAll.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearAll.Location = new Point(375, 358);
+            btnClearAll.Name = "btnClearAll";
+            btnClearAll.Size = new Size(112, 31);
+            btnClearAll.TabIndex = 8;
+            btnClearAll.Text = "Clear All";
+            btnClearAll.UseVisualStyleBackColor = true;
+            btnClearAll.Click += btnClearAll_Click;
+            // 
+            // btnDecrypt
+            // 
+            btnDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDecrypt.Location = new Point(199, 358);
+            btnDecrypt.Name = "btnDecrypt";
+            btnDecrypt.Size = new Size(112, 31);
+            btnDecrypt.TabIndex = 7;
+            btnDecrypt.Text = "Decrypt";
+            btnDecrypt.UseVisualStyleBackColor = true;
+            btnDecrypt.Click += btnDecrypt_Click;
+            // 
+            // btnEncrypt
+            // 
+            btnEncrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEncrypt.Location = new Point(50, 358);
+            btnEncrypt.Name = "btnEncrypt";
+            btnEncrypt.Size = new Size(112, 31);
+            btnEncrypt.TabIndex = 6;
+            btnEncrypt.Text = "Encrypt";
+            btnEncrypt.UseVisualStyleBackColor = true;
+            btnEncrypt.Click += btnEncrypt_Click;
+            // 
+            // textBoxPassword
+            // 
+            textBoxPassword.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxPassword.Location = new Point(50, 327);
+            textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.PlaceholderText = "Use this password for encryption and decryption";
+            textBoxPassword.Size = new Size(261, 22);
+            textBoxPassword.TabIndex = 5;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.Control;
+            label7.Location = new Point(50, 307);
+            label7.Name = "label7";
+            label7.Size = new Size(112, 17);
+            label7.TabIndex = 4;
+            label7.Text = "Master password";
+            // 
+            // listBoxPass
+            // 
+            listBoxPass.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            listBoxPass.FormattingEnabled = true;
+            listBoxPass.Location = new Point(50, 87);
+            listBoxPass.Name = "listBoxPass";
+            listBoxPass.Size = new Size(437, 69);
+            listBoxPass.TabIndex = 3;
+            // 
+            // btnClearPass
+            // 
+            btnClearPass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearPass.Location = new Point(493, 127);
+            btnClearPass.Name = "btnClearPass";
+            btnClearPass.Size = new Size(103, 31);
+            btnClearPass.TabIndex = 2;
+            btnClearPass.Text = "Clear";
+            btnClearPass.UseVisualStyleBackColor = true;
+            btnClearPass.Click += btnClearPass_Click;
+            // 
+            // btnAddPass
+            // 
+            btnAddPass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddPass.Location = new Point(493, 87);
+            btnAddPass.Name = "btnAddPass";
+            btnAddPass.Size = new Size(103, 31);
+            btnAddPass.TabIndex = 1;
+            btnAddPass.Text = "Add";
+            btnAddPass.UseVisualStyleBackColor = true;
+            btnAddPass.Click += btnAddPass_Click;
+            // 
+            // labelPassSelector
+            // 
+            labelPassSelector.AutoSize = true;
+            labelPassSelector.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelPassSelector.ForeColor = SystemColors.Control;
+            labelPassSelector.Location = new Point(50, 67);
+            labelPassSelector.Name = "labelPassSelector";
+            labelPassSelector.Size = new Size(179, 17);
+            labelPassSelector.TabIndex = 0;
+            labelPassSelector.Text = "Select passwords to encrypt";
             // 
             // PassManagerMainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(754, 488);
+            ClientSize = new Size(650, 465);
             ControlBox = false;
             Controls.Add(tabControl1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -350,13 +546,16 @@
             Name = "PassManagerMainWindow";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Simple Password Manager";
-            Load += frmprincipal_Load;
+            Load += PassManagerMainWindow_Load;
+            Resize += PassManagerMainWindow_Resize;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvver).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -367,12 +566,7 @@
         private TabPage tabPage2;
         private DataGridView dgvver;
         private ComboBox cb;
-        private TextBox txtbuscartabla;
-        private Label label2;
         private Label label1;
-        private Button btnsalir;
-        private Button btnelimartabla;
-        private Button btnguardar;
         private Button btncrearpass;
         private ListBox listBox1;
         private TextBox textBox2;
@@ -381,6 +575,26 @@
         private Label label3;
         private Label label5;
         private Label label6;
+        private TabPage tabPage3;
+        private Label labelPassSelector;
+        private Button btnAddPass;
+        private Button btnClearPass;
+        private ListBox listBoxPass;
+        private TextBox textBoxPassword;
+        private Label label7;
+        private Button btnDecrypt;
+        private Button btnEncrypt;
+        private Button btnClearAll;
+        private ListBox listBoxPassDecrypt;
+        private Button btnClearDecrypt;
+        private Button btnPassDecrypt;
+        private Label labelPassSelectorDecrypt;
+        private Label label8;
+        private TextBox txtbuscartabla;
+        private Label label2;
+        private Button btnSave;
+        private Button btnDeleteTable;
         private Button btnAbout;
+        private Button btnexitt;
     }
 }

@@ -52,12 +52,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(34, 29);
+            label1.Location = new Point(34, 23);
             label1.Name = "label1";
-            label1.Size = new Size(293, 25);
+            label1.Size = new Size(291, 23);
             label1.TabIndex = 10;
             label1.Text = "CHANGE THE CURRENT PASSWORD";
             // 
@@ -118,7 +117,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.WindowFrame;
+            BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(356, 274);
             ControlBox = false;
             Controls.Add(label3);
