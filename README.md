@@ -29,7 +29,9 @@ Simple Password Manager is a program that allows you to store and manage your pa
   Uses <a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">.Net 7.0</a><br>
 
 
- [![Ver Demo](https://github.com/lextrack/https://github.com/lextrack/Simple-Password-Manager/blob/main/Demo/Demo%20Simple%20Password%20Manager.mp4)](https://github.com/usuario/repo/blob/main/Demo/Demo%20Simple%20Password%20Manager.mp4)
+<h4>Watch a demo of the app here:</h4>
+
+  [![How to use the app](https://i.postimg.cc/hvWcrTPQ/passwordmanager.png)](https://youtu.be/lUHBT6GWCA0)
 
 
 </p>
