@@ -8,6 +8,7 @@ namespace Simple_Password_Manager
 {
     public partial class PassManagerMainWindow : Form
     {
+        private bool isMaximized = false;
         string tabla = "";
         private string encryptedFolder = Path.Combine(Application.StartupPath, "Encrypted");
         private string dbFolder = Path.Combine(Application.StartupPath, "db");
@@ -23,6 +24,46 @@ namespace Simple_Password_Manager
 
             Actualizar(0);
             btnSave.Enabled = false;
+        }
+
+        private void PassManagerMainWindow_Resize(object sender, EventArgs e)
+        {
+            tabControl1.Size = new Size(ClientSize.Width - 20, ClientSize.Height - 40);
+            tabControl1.Location = new Point(10, 30);
+        }
+
+        private void MinimizeWin()
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void MaximizeWin()
+        {
+            if (isMaximized)
+            {
+
+                this.WindowState = FormWindowState.Normal;
+                isMaximized = false;
+            }
+            else
+            {
+
+                this.WindowState = FormWindowState.Maximized;
+                isMaximized = true;
+            }
+        }
+
+        private void ExitApp()
+        {
+            if ((int)MessageBox.Show("Are you sure you want to exit? If you haven't saved your changes, you will lose all unsaved data.", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (int)Constants.vbYes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void PassManagerMainWindow_Load(object sender, EventArgs e)
@@ -91,18 +132,6 @@ namespace Simple_Password_Manager
         {
             Aboutform Aboutformnew = new Aboutform();
             Aboutformnew.ShowDialog();
-        }
-
-        private void btnexitt_Click(object sender, EventArgs e)
-        {
-            if ((int)MessageBox.Show("Are you sure you want to exit? If you haven't saved your changes, you will lose all unsaved data.", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == (int)Constants.vbYes)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                return;
-            }
         }
 
         private void Actualizar(int index)
@@ -371,10 +400,53 @@ namespace Simple_Password_Manager
             }
         }
 
-        private void PassManagerMainWindow_Resize(object sender, EventArgs e)
+        #region ControlBoxButtons
+
+        private void btnMax_Click(object sender, EventArgs e)
         {
-            tabControl1.Size = new Size(ClientSize.Width - 20, ClientSize.Height - 40);
-            tabControl1.Location = new Point(10, 30);
+            MaximizeWin();
         }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            MinimizeWin();
+        }
+
+        private void btnMinPass_Click(object sender, EventArgs e)
+        {
+            MinimizeWin();
+        }
+
+        private void btnMaxPass_Click(object sender, EventArgs e)
+        {
+            MaximizeWin();
+        }
+
+        private void btnMinEncryptation_Click(object sender, EventArgs e)
+        {
+            MinimizeWin();
+        }
+
+        private void btnMaxEncryptation_Click(object sender, EventArgs e)
+        {
+            MaximizeWin();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            ExitApp();
+        }
+
+        private void btnExitPass_Click(object sender, EventArgs e)
+        {
+            ExitApp();
+        }
+
+        private void btnExitEncryptation_Click(object sender, EventArgs e)
+        {
+            ExitApp();
+        }
+
+        #endregion
     }
 }

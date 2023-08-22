@@ -127,7 +127,7 @@
             Controls.Add(textnewpass);
             Controls.Add(btnCancel);
             Controls.Add(btnSavenewpass);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Newpass";

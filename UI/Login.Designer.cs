@@ -117,7 +117,7 @@
             Controls.Add(txtLog);
             Controls.Add(btnExit);
             Controls.Add(btnLogin);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Login";

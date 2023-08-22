@@ -50,9 +50,9 @@
             LbAbout2.ForeColor = SystemColors.Control;
             LbAbout2.Location = new Point(24, 185);
             LbAbout2.Name = "LbAbout2";
-            LbAbout2.Size = new Size(182, 30);
+            LbAbout2.Size = new Size(230, 30);
             LbAbout2.TabIndex = 13;
-            LbAbout2.Text = "This software is made possible by\r\nGerryStudios.";
+            LbAbout2.Text = "This software is made possible by\r\nGerryStudios, Flaticon and MalwareStudio.";
             // 
             // LbAbout1
             // 
@@ -74,7 +74,7 @@
             label3.Name = "label3";
             label3.Size = new Size(170, 38);
             label3.TabIndex = 11;
-            label3.Text = "Simple Password Manager\r\nv1.0.5";
+            label3.Text = "Simple Password Manager\r\nv1.0.6";
             // 
             // label2
             // 
@@ -98,7 +98,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
