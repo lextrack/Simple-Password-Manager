@@ -30,6 +30,10 @@ Simple Password Manager is a program that allows you to store and manage your pa
 
 <h4>Watch a demo of the app here:</h4>
 
+
+https://github.com/lextrack/Simple-Password-Manager/assets/42826936/1cdfb8b4-d334-4d7f-9005-9c12ebd39ee7
+
+
 </p>
 
 <h2 align="center">Acknowledgments</h2>
