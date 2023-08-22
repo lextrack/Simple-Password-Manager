@@ -6,7 +6,7 @@
 
 <h2 align="center">Introduction</h2>
 <p align="left">
-Simple Password Manager is a program that allows you to store and manage your passwords in a better way than with Notepad for Windows. You can create new passwords, edit existing ones, and delete passwords that you no longer need.
+Simple Password Manager is a program that allows you to store and manage your passwords in a better way than with Notepad for Windows. You can create new passwords, edit existing ones, and delete passwords that you no longer need. Additionally, you can encrypt and decrypt your passwords.
 </p>
 
 <h2 align="center">How to use?</h2>
