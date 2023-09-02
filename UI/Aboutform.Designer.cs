@@ -74,7 +74,7 @@
             label3.Name = "label3";
             label3.Size = new Size(170, 38);
             label3.TabIndex = 11;
-            label3.Text = "Simple Password Manager\r\nv1.0.6";
+            label3.Text = "Simple Password Manager\r\nv1.0.7";
             // 
             // label2
             // 

@@ -26,6 +26,12 @@ namespace Simple_Password_Manager
             btnSave.Enabled = false;
         }
 
+
+        private void PassManagerMainWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void PassManagerMainWindow_Resize(object sender, EventArgs e)
         {
             tabControl1.Size = new Size(ClientSize.Width - 20, ClientSize.Height - 40);
@@ -64,11 +70,6 @@ namespace Simple_Password_Manager
             {
                 return;
             }
-        }
-
-        private void PassManagerMainWindow_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void CrearCarpetaDb()
@@ -208,7 +209,7 @@ namespace Simple_Password_Manager
 
                 using (FileStream fsCrypt = new FileStream(outputFile, FileMode.Create))
                 {
-                    RijndaelManaged RMCrypto = new RijndaelManaged();
+                    RijndaelManaged RMCrypto = new();
 
                     using (CryptoStream cs = new CryptoStream(fsCrypt, RMCrypto.CreateEncryptor(key, key), CryptoStreamMode.Write))
                     {
@@ -236,7 +237,7 @@ namespace Simple_Password_Manager
 
                 using (FileStream fsCrypt = new FileStream(inputFile, FileMode.Open))
                 {
-                    RijndaelManaged RMCrypto = new RijndaelManaged();
+                    RijndaelManaged RMCrypto = new();
 
                     using (CryptoStream cs = new CryptoStream(fsCrypt, RMCrypto.CreateDecryptor(key, key), CryptoStreamMode.Read))
                     {
