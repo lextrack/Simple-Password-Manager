@@ -228,7 +228,7 @@ namespace Simple_Password_Manager
             }
         }
 
-        private void DecryptFile(string inputFile, string outputFile, string password)
+        private bool DecryptFile(string inputFile, string outputFile, string password)
         {
             try
             {
@@ -237,7 +237,7 @@ namespace Simple_Password_Manager
 
                 using (FileStream fsCrypt = new FileStream(inputFile, FileMode.Open))
                 {
-                    RijndaelManaged RMCrypto = new();
+                    RijndaelManaged RMCrypto = new RijndaelManaged();
 
                     using (CryptoStream cs = new CryptoStream(fsCrypt, RMCrypto.CreateDecryptor(key, key), CryptoStreamMode.Read))
                     {
@@ -249,12 +249,15 @@ namespace Simple_Password_Manager
                         }
                     }
                 }
+
+                return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
+
 
         private void btnAddPass_Click(object sender, EventArgs e)
         {
@@ -341,6 +344,7 @@ namespace Simple_Password_Manager
             dgvver.Refresh();
             cb.Refresh();
             Actualizar(0);
+            textBoxPassword.Clear();
         }
 
         private void btnDecrypt_Click(object sender, EventArgs e)
@@ -366,12 +370,18 @@ namespace Simple_Password_Manager
 
                 if (inputFile.Trim().EndsWith(".!LOCKED") && File.Exists(inputFile))
                 {
-                    DecryptFile(inputFile, outputFile, textBoxPassword.Text);
-                    File.Delete(inputFile);
-                    filesDecrypted++;
+                    bool decryptionSuccessful = DecryptFile(inputFile, outputFile, textBoxPassword.Text);
+                    if (decryptionSuccessful)
+                    {
+                        File.Delete(inputFile);
+                        filesDecrypted++;
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Incorrect password for file {inputFile}", "Decryption Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
-
 
             if (filesDecrypted > 0)
             {
@@ -383,7 +393,9 @@ namespace Simple_Password_Manager
             dgvver.Refresh();
             cb.Refresh();
             Actualizar(0);
+            textBoxPassword.Clear();
         }
+
 
         private void btnPassDecrypt_Click(object sender, EventArgs e)
         {
@@ -449,5 +461,10 @@ namespace Simple_Password_Manager
         }
 
         #endregion
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

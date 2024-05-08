@@ -57,7 +57,7 @@
             // LbAbout1
             // 
             LbAbout1.AutoSize = true;
-            LbAbout1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            LbAbout1.Font = new Font("Segoe UI", 9F);
             LbAbout1.ForeColor = SystemColors.Control;
             LbAbout1.Location = new Point(24, 110);
             LbAbout1.Name = "LbAbout1";
@@ -68,24 +68,24 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Segoe UI", 10F);
             label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(95, 21);
             label3.Name = "label3";
             label3.Size = new Size(170, 38);
             label3.TabIndex = 11;
-            label3.Text = "Simple Password Manager\r\nv1.0.7";
+            label3.Text = "Simple Password Manager\r\nv1.0.8";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 9F);
             label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(24, 81);
             label2.Name = "label2";
             label2.Size = new Size(151, 15);
             label2.TabIndex = 10;
-            label2.Text = "Copyright © 2023 Lextrack.";
+            label2.Text = "Copyright © 2024 Lextrack.";
             // 
             // Aboutform
             // 

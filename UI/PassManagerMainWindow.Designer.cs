@@ -88,7 +88,7 @@
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabControl1.Font = new Font("Segoe UI", 9.75F);
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.Padding = new Point(8, 5);
@@ -111,7 +111,7 @@
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(dgvver);
-            tabPage1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage1.Font = new Font("Segoe UI", 9.75F);
             tabPage1.Location = new Point(4, 30);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
@@ -161,7 +161,7 @@
             // btnAbout
             // 
             btnAbout.Anchor = AnchorStyles.Top;
-            btnAbout.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAbout.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnAbout.Location = new Point(405, 121);
             btnAbout.Name = "btnAbout";
             btnAbout.Size = new Size(145, 35);
@@ -173,7 +173,7 @@
             // btnDeleteTable
             // 
             btnDeleteTable.Anchor = AnchorStyles.Top;
-            btnDeleteTable.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDeleteTable.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnDeleteTable.Location = new Point(252, 121);
             btnDeleteTable.Name = "btnDeleteTable";
             btnDeleteTable.Size = new Size(145, 35);
@@ -185,7 +185,7 @@
             // btnSave
             // 
             btnSave.Anchor = AnchorStyles.Top;
-            btnSave.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnSave.Location = new Point(98, 121);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(145, 35);
@@ -200,7 +200,7 @@
             cb.BackColor = SystemColors.ButtonHighlight;
             cb.Cursor = Cursors.Hand;
             cb.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            cb.Font = new Font("Segoe UI", 9F);
             cb.FormattingEnabled = true;
             cb.Location = new Point(257, 44);
             cb.Name = "cb";
@@ -212,7 +212,7 @@
             // 
             txtbuscartabla.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtbuscartabla.BackColor = SystemColors.ButtonHighlight;
-            txtbuscartabla.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtbuscartabla.Font = new Font("Segoe UI", 9F);
             txtbuscartabla.Location = new Point(257, 80);
             txtbuscartabla.Name = "txtbuscartabla";
             txtbuscartabla.Size = new Size(97, 23);
@@ -223,7 +223,7 @@
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(17, 80);
             label2.Name = "label2";
@@ -235,7 +235,7 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(17, 44);
             label1.Name = "label1";
@@ -251,7 +251,7 @@
             dgvver.BorderStyle = BorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.WindowFrame;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F);
             dataGridViewCellStyle1.ForeColor = SystemColors.Control;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.HotTrack;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
@@ -260,7 +260,7 @@
             dgvver.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.WindowFrame;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F);
             dataGridViewCellStyle2.ForeColor = SystemColors.Control;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.HotTrack;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.InfoText;
@@ -272,14 +272,13 @@
             dgvver.Name = "dgvver";
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.WindowFrame;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F);
             dataGridViewCellStyle3.ForeColor = SystemColors.Control;
             dataGridViewCellStyle3.SelectionBackColor = SystemColors.HotTrack;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dgvver.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvver.RowHeadersVisible = false;
-            dgvver.RowTemplate.Height = 25;
             dgvver.Size = new Size(636, 228);
             dgvver.TabIndex = 2;
             // 
@@ -297,13 +296,14 @@
             tabPage2.Controls.Add(listBox1);
             tabPage2.Controls.Add(textBox2);
             tabPage2.Controls.Add(textBox1);
-            tabPage2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage2.Font = new Font("Segoe UI", 9.75F);
             tabPage2.Location = new Point(4, 30);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(642, 431);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Add a new password";
+            tabPage2.Click += tabPage2_Click;
             // 
             // btnExitPass
             // 
@@ -348,7 +348,7 @@
             // 
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             label6.ForeColor = SystemColors.Control;
             label6.Location = new Point(117, 212);
             label6.Name = "label6";
@@ -360,7 +360,7 @@
             // 
             label5.Anchor = AnchorStyles.Top;
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             label5.ForeColor = SystemColors.Control;
             label5.Location = new Point(213, 43);
             label5.Name = "label5";
@@ -372,7 +372,7 @@
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             label4.ForeColor = SystemColors.Control;
             label4.Location = new Point(117, 147);
             label4.Name = "label4";
@@ -384,7 +384,7 @@
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(117, 86);
             label3.Name = "label3";
@@ -396,7 +396,7 @@
             // 
             btncrearpass.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btncrearpass.BackColor = SystemColors.ButtonHighlight;
-            btncrearpass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btncrearpass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btncrearpass.Location = new Point(117, 376);
             btncrearpass.Name = "btncrearpass";
             btncrearpass.Size = new Size(408, 29);
@@ -409,7 +409,7 @@
             // 
             listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listBox1.BackColor = SystemColors.ButtonHighlight;
-            listBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox1.Font = new Font("Segoe UI", 9.75F);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 17;
             listBox1.Location = new Point(117, 232);
@@ -422,7 +422,7 @@
             // 
             textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox2.BackColor = SystemColors.ButtonHighlight;
-            textBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Font = new Font("Segoe UI", 9.75F);
             textBox2.Location = new Point(117, 106);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(408, 25);
@@ -432,7 +432,7 @@
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox1.BackColor = SystemColors.ButtonHighlight;
-            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Font = new Font("Segoe UI", 9.75F);
             textBox1.Location = new Point(117, 167);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Press enter to add each column to the list";
@@ -460,7 +460,7 @@
             tabPage3.Controls.Add(btnClearPass);
             tabPage3.Controls.Add(btnAddPass);
             tabPage3.Controls.Add(labelPassSelector);
-            tabPage3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage3.Font = new Font("Segoe UI", 9.75F);
             tabPage3.Location = new Point(4, 30);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
@@ -511,7 +511,7 @@
             // 
             label8.Anchor = AnchorStyles.Top;
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             label8.ForeColor = SystemColors.Control;
             label8.Location = new Point(167, 43);
             label8.Name = "label8";
@@ -522,8 +522,9 @@
             // listBoxPassDecrypt
             // 
             listBoxPassDecrypt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            listBoxPassDecrypt.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            listBoxPassDecrypt.Font = new Font("Segoe UI", 8.25F);
             listBoxPassDecrypt.FormattingEnabled = true;
+            listBoxPassDecrypt.ItemHeight = 13;
             listBoxPassDecrypt.Location = new Point(51, 227);
             listBoxPassDecrypt.Name = "listBoxPassDecrypt";
             listBoxPassDecrypt.Size = new Size(437, 69);
@@ -532,7 +533,7 @@
             // btnClearDecrypt
             // 
             btnClearDecrypt.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnClearDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnClearDecrypt.Location = new Point(494, 267);
             btnClearDecrypt.Name = "btnClearDecrypt";
             btnClearDecrypt.Size = new Size(103, 31);
@@ -544,7 +545,7 @@
             // btnPassDecrypt
             // 
             btnPassDecrypt.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnPassDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPassDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnPassDecrypt.Location = new Point(494, 227);
             btnPassDecrypt.Name = "btnPassDecrypt";
             btnPassDecrypt.Size = new Size(103, 31);
@@ -557,7 +558,7 @@
             // 
             labelPassSelectorDecrypt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelPassSelectorDecrypt.AutoSize = true;
-            labelPassSelectorDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelPassSelectorDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             labelPassSelectorDecrypt.ForeColor = SystemColors.Control;
             labelPassSelectorDecrypt.Location = new Point(51, 207);
             labelPassSelectorDecrypt.Name = "labelPassSelectorDecrypt";
@@ -567,7 +568,7 @@
             // 
             // btnClearAll
             // 
-            btnClearAll.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearAll.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnClearAll.Location = new Point(376, 377);
             btnClearAll.Name = "btnClearAll";
             btnClearAll.Size = new Size(112, 31);
@@ -578,7 +579,7 @@
             // 
             // btnDecrypt
             // 
-            btnDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDecrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnDecrypt.Location = new Point(200, 377);
             btnDecrypt.Name = "btnDecrypt";
             btnDecrypt.Size = new Size(112, 31);
@@ -589,7 +590,7 @@
             // 
             // btnEncrypt
             // 
-            btnEncrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEncrypt.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnEncrypt.Location = new Point(51, 377);
             btnEncrypt.Name = "btnEncrypt";
             btnEncrypt.Size = new Size(112, 31);
@@ -601,9 +602,10 @@
             // textBoxPassword
             // 
             textBoxPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBoxPassword.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxPassword.Font = new Font("Segoe UI", 8.25F);
             textBoxPassword.Location = new Point(51, 346);
             textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.PasswordChar = '*';
             textBoxPassword.PlaceholderText = "Use this password for encryption and decryption";
             textBoxPassword.Size = new Size(261, 22);
             textBoxPassword.TabIndex = 5;
@@ -612,7 +614,7 @@
             // 
             label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             label7.ForeColor = SystemColors.Control;
             label7.Location = new Point(51, 326);
             label7.Name = "label7";
@@ -623,8 +625,9 @@
             // listBoxPass
             // 
             listBoxPass.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            listBoxPass.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            listBoxPass.Font = new Font("Segoe UI", 8.25F);
             listBoxPass.FormattingEnabled = true;
+            listBoxPass.ItemHeight = 13;
             listBoxPass.Location = new Point(51, 106);
             listBoxPass.Name = "listBoxPass";
             listBoxPass.Size = new Size(437, 69);
@@ -633,7 +636,7 @@
             // btnClearPass
             // 
             btnClearPass.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnClearPass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearPass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnClearPass.Location = new Point(494, 146);
             btnClearPass.Name = "btnClearPass";
             btnClearPass.Size = new Size(103, 31);
@@ -645,7 +648,7 @@
             // btnAddPass
             // 
             btnAddPass.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAddPass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddPass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnAddPass.Location = new Point(494, 106);
             btnAddPass.Name = "btnAddPass";
             btnAddPass.Size = new Size(103, 31);
@@ -658,7 +661,7 @@
             // 
             labelPassSelector.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelPassSelector.AutoSize = true;
-            labelPassSelector.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelPassSelector.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             labelPassSelector.ForeColor = SystemColors.Control;
             labelPassSelector.Location = new Point(51, 86);
             labelPassSelector.Name = "labelPassSelector";

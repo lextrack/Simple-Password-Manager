@@ -70,7 +70,7 @@ namespace Simple_Password_Manager
             d.Rows.Clear();
             d.Columns.Clear();
 
-            if (t.Count == 0) return; // Evita un índice fuera de rango si la tabla está vacía.
+            if (t.Count == 0) return;
 
             for (int i = 0; i < t[0].Count; i++)
             {
